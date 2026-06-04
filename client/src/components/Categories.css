@@ -200,10 +200,14 @@
     justify-content: flex-start;
     overflow-x: auto;
     white-space: nowrap;
-    padding-bottom: 16px;
-    scrollbar-width: thin;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .collection-tabs::-webkit-scrollbar {
+    display: none;
   }
   .collection-tab-btn::after {
-    bottom: -17px;
+    bottom: -13px;
   }
 }

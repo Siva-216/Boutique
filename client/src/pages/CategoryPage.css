@@ -312,6 +312,12 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
+@media (max-width: 1200px) {
+  .category-products-grid.cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Fallback messages */
 .no-products-message, .category-error-page {
   padding: 48px;

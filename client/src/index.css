@@ -43,12 +43,14 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.2; }
 .devanagari { font-family: var(--font-deva); }
 
 /* === LAYOUT === */
-.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; width: 100%; box-sizing: border-box; }
 .section { padding: 72px 0; }
 .text-center { text-align: center; }
 
@@ -95,5 +97,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
+  .container { padding: 0 16px; }
   .section { padding: 56px 0; }
 }

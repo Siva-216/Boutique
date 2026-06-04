@@ -6,6 +6,7 @@
   padding-bottom: 16px;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 .products-scroll::-webkit-scrollbar { display: none; }
 .scroll-nav {
@@ -27,3 +28,13 @@
   cursor: pointer;
 }
 .scroll-btn:hover { background: var(--maroon); color: #fff; border-color: var(--maroon); }
+
+@media (max-width: 768px) {
+  .scroll-nav {
+    display: none;
+  }
+  .products-scroll {
+    gap: 16px;
+    margin-top: 24px;
+  }
+}
