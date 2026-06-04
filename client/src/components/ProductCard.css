@@ -1,0 +1,93 @@
+.product-card {
+  flex: 0 0 270px;
+  scroll-snap-align: start;
+  border: 1px solid var(--border-light);
+  background: var(--ivory);
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  color: inherit;
+}
+.product-card:hover { box-shadow: var(--shadow-card); transform: translateY(-3px); }
+.product-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: var(--maroon);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 5px 12px;
+  z-index: 2;
+}
+.product-badge.sold { background: var(--text-muted); }
+.product-badge.sale { background: var(--terracotta); }
+.product-img {
+  aspect-ratio: 3/4;
+  background: linear-gradient(160deg, var(--bg-warm) 0%, #e2d3bc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product-img-icon { font-size: 52px; opacity: 0.2; }
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,15,8,0.0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+.product-card:hover .product-overlay { background: rgba(26,15,8,0.18); }
+.overlay-btn-mock {
+  background: var(--ivory);
+  color: var(--text-dark);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid var(--border-light);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s, color 0.2s;
+  display: inline-block;
+}
+.product-card:hover .overlay-btn-mock { opacity: 1; transform: translateY(0); }
+.overlay-btn-mock:hover { background: var(--maroon); color: #fff; border-color: var(--maroon); }
+.product-info { padding: 16px 16px 20px; text-align: center; }
+.product-name {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  min-height: 2.4em;
+}
+.product-price {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--maroon);
+  font-weight: 500;
+}
+.product-price del {
+  color: var(--text-muted);
+  font-weight: 300;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .product-card { flex: 0 0 220px; }
+}

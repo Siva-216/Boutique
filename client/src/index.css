@@ -1,0 +1,99 @@
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap');
+
+/* === RESET & BASE === */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* === VARIABLES === */
+:root {
+  --bg-cream: #faf6ef;
+  --bg-warm: #f3ebe0;
+  --bg-dark: #1a0f08;
+  --bg-maroon: #3d0e0e;
+  --gold: #b8860b;
+  --gold-light: #d4a843;
+  --gold-pale: #f0ddb8;
+  --maroon: #6b1520;
+  --maroon-deep: #3d0e0e;
+  --terracotta: #c46a3a;
+  --sage: #6b7f5e;
+  --ivory: #fefcf7;
+  --text-dark: #2a1a0e;
+  --text-warm: #5a4330;
+  --text-muted: #8b7560;
+  --border-light: #e0d5c4;
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-deva: 'Noto Serif Devanagari', serif;
+  --shadow-soft: 0 4px 24px rgba(60,30,10,0.10);
+  --shadow-card: 0 2px 16px rgba(60,30,10,0.13);
+  --radius: 2px;
+}
+
+/* === TYPOGRAPHY === */
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  background: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.2; }
+.devanagari { font-family: var(--font-deva); }
+
+/* === LAYOUT === */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 72px 0; }
+.text-center { text-align: center; }
+
+/* === BUTTONS === */
+.btn-primary {
+  background: var(--maroon);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 15px 40px;
+  border: 1.5px solid var(--maroon);
+  transition: all 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--maroon-deep); border-color: var(--maroon-deep); }
+.btn-outline {
+  background: transparent;
+  color: var(--maroon);
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 15px 40px;
+  border: 1.5px solid var(--maroon);
+  transition: all 0.3s;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-outline:hover { background: var(--maroon); color: #fff; }
+
+/* === ANIMATIONS === */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.anim-fade-up { animation: fadeUp 0.7s ease-out both; }
+.anim-delay-1 { animation-delay: 0.12s; }
+.anim-delay-2 { animation-delay: 0.24s; }
+.anim-delay-3 { animation-delay: 0.36s; }
+.anim-delay-4 { animation-delay: 0.48s; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+}

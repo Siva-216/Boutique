@@ -1,0 +1,29 @@
+.products-scroll {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.products-scroll::-webkit-scrollbar { display: none; }
+.scroll-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+.scroll-btn {
+  width: 44px; height: 44px;
+  border: 1.5px solid var(--border-light);
+  background: var(--ivory);
+  font-size: 18px;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.scroll-btn:hover { background: var(--maroon); color: #fff; border-color: var(--maroon); }

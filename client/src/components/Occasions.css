@@ -1,0 +1,63 @@
+.occasion { background: var(--bg-dark); color: var(--gold-pale); padding: 80px 0; }
+.occasion .section-label { color: var(--gold-light); }
+.occasion .section-title { color: var(--ivory); }
+.occasion .section-subtitle { color: rgba(255,255,255,0.55); }
+.occasion .ornament::before, .occasion .ornament::after { background: linear-gradient(to right, transparent, var(--gold-light), transparent); }
+.occasion .ornament span { color: var(--gold-light); }
+.occ-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 36px 0 32px;
+  flex-wrap: wrap;
+}
+.occ-tab {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 10px 28px;
+  border: 1px solid rgba(184,134,11,0.35);
+  color: var(--gold-pale);
+  background: transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.occ-tab:hover, .occ-tab.active {
+  background: var(--gold);
+  color: var(--bg-dark);
+  border-color: var(--gold);
+}
+.occ-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 16px;
+}
+.occ-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(184,134,11,0.2);
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.occ-card:hover { background: rgba(255,255,255,0.09); border-color: var(--gold); transform: translateY(-3px); }
+.occ-card-img {
+  aspect-ratio: 3/4;
+  background: linear-gradient(160deg, rgba(184,134,11,0.15) 0%, rgba(61,14,14,0.3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.occ-card-img span { font-size: 44px; opacity: 0.3; }
+.occ-card-info { padding: 14px; text-align: center; }
+.occ-card-info h4 { font-family: var(--font-display); font-size: 0.95rem; color: var(--ivory); font-weight: 400; margin-bottom: 4px; }
+.occ-card-info span { font-size: 0.88rem; color: var(--gold-light); }
+
+@media (max-width: 1024px) {
+  .occ-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .occ-grid { grid-template-columns: 1fr; max-width: 320px; margin: 16px auto 0; }
+}
